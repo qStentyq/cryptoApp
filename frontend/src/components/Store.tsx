@@ -50,7 +50,8 @@ export default function Store() {
             fetch("http://localhost:8001/orders/", {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json;charset=utf-8",
+                    "Content-Type": "application/json",
+                    //;charset=utf-8
                 },
                 body: JSON.stringify(item),
             })

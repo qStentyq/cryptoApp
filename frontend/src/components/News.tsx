@@ -1,4 +1,4 @@
-import React, { useState, FC } from "react";
+import { useState, FC } from "react";
 import { Select, Typography, Row, Col, Card } from "antd";
 
 import { useGetNewsQuery } from "../services/cryptoNewsAPI";

@@ -4,13 +4,15 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.background import BackgroundTasks
 from pydantic import BaseModel
 from redis_om import get_redis_connection, HashModel
-import requests, time
+import requests
 
 app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins = ['http://localhost:5173', 'http://localhost:3000'],
+    allow_credentials = True,
+    allow_origins = ['http://localhost:5173', 'http://localhost:3000', 'http://localhost:8000',
+                     'http://localhost:8001'],
     allow_methods = ['*'],
     allow_headers = ['*']
 )

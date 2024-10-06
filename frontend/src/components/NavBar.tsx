@@ -5,7 +5,6 @@ import {
     MoneyCollectOutlined,
     BulbOutlined,
     FundOutlined,
-    MenuOutlined,
     ShoppingCartOutlined,
     BuildOutlined,
 } from "@ant-design/icons";
@@ -23,7 +22,7 @@ const Navbar = () => {
 
             </Button> */}
             </div>
-            <Menu theme='dark' icon={<MenuOutlined />}>
+            <Menu theme='dark'>
                 <Menu.Item icon={<HomeOutlined />}>
                     <Link to='/'>Home</Link>
                 </Menu.Item>

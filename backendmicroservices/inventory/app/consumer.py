@@ -1,13 +1,13 @@
-import sys 
-import os
-current = os.path.dirname(os.path.realpath(__file__))
-parent = os.path.dirname(current)
-parent = os.path.dirname(parent)
-sys.path.append(parent)
-from payment.app.main import redis
+from redis_om import get_redis_connection
 from main import Product 
 import time 
 
+redis = get_redis_connection(
+    host = 'redis-16021.c135.eu-central-1-1.ec2.redns.redis-cloud.com',
+    port = 16021,
+    password = 'v5X7N2lmV1GbvQVA0NACWnqJ6EmhswxP',
+    decode_responses = True
+)
 
 key = 'order_completed'
 

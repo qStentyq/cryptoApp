@@ -1,2 +1,4 @@
 fastapi==0.75.0
 redis-om==0.0.20
+uvicorn==0.31.0
+requests==2.32.3 

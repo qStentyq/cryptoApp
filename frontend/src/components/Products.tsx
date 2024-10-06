@@ -59,7 +59,7 @@ export default function Products() {
                                             <a
                                                 href='#'
                                                 className='btn btn-sm btn-outline-secondary'
-                                                onClick={(e) => del(product.id)}
+                                                onClick={() => del(product.id)}
                                             >
                                                 Delete
                                             </a>

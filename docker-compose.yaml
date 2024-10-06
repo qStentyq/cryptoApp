@@ -16,18 +16,24 @@ services:
             - dev
     backend-mic1:
         build:
-            context: ./backendmicroservices/inventory
+            context: ./backendmicroservices/inventory/app
         networks:
             - dev
+        ports:
+            - "8000:8000"
 
     backend-mic2:
         build:
-            context: ./backendmicroservices/payment
+            context: ./backendmicroservices/payment/app
         networks:
             - dev
+        ports:
+            - "8001:8001"
 
     frontend:
         build:
             context: ./frontend
         networks:
             - dev
+        ports:
+            - "5173:5173"
