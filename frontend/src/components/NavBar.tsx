@@ -1,5 +1,4 @@
-import React from "react";
-import { Button, Menu, Typography, Avatar } from "antd";
+import { Menu, Typography, Avatar } from "antd";
 import { Link } from "react-router-dom";
 import {
     HomeOutlined,
@@ -7,7 +6,7 @@ import {
     BulbOutlined,
     FundOutlined,
     MenuOutlined,
-    ProjectOutlined,
+    ShoppingCartOutlined,
     BuildOutlined,
 } from "@ant-design/icons";
 
@@ -42,6 +41,9 @@ const Navbar = () => {
             </Menu.Item> */}
                 <Menu.Item icon={<BuildOutlined />}>
                     <Link to='/coinbuilder'>Coin Builder</Link>
+                </Menu.Item>
+                <Menu.Item icon={<ShoppingCartOutlined />}>
+                    <Link to='/store'>Our Store</Link>
                 </Menu.Item>
             </Menu>
         </div>

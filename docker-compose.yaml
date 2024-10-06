@@ -1,0 +1,33 @@
+networks:
+    dev:
+
+services:
+    nginx:
+        image: nginx:stable-alpine
+        ports:
+            - "80:80"
+        volumes:
+            - "./nginx.conf:/etc/nginx/nginx.conf"
+        depends_on:
+            - backend-mic1
+            - backend-mic2
+            - frontend
+        networks:
+            - dev
+    backend-mic1:
+        build:
+            context: ./backendmicroservices/inventory
+        networks:
+            - dev
+
+    backend-mic2:
+        build:
+            context: ./backendmicroservices/payment
+        networks:
+            - dev
+
+    frontend:
+        build:
+            context: ./frontend
+        networks:
+            - dev

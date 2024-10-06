@@ -1,0 +1,162 @@
+:root {
+    --color-light: white;
+    --color-dark: #212121;
+    --color-signal: #fab700;
+
+    --color-background: var(--color-light);
+    --color-text: var(--color-dark);
+    --color-accent: var(--color-signal);
+
+    --size-bezel: 0.5rem;
+    --size-radius: 4px;
+}
+
+.product-card {
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 20rem;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px 0px rgba(0, 64, 128, 0.1);
+    margin: 10px;
+    padding: 10px;
+}
+
+.product-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.product-card__image {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-card__description,
+.product-card__price,
+.product-card__brand,
+.product-card__quantity {
+    margin: 0.2rem 0;
+    font-size: 1rem;
+}
+
+.product-card__brand {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.product-card__description {
+    font-weight: normal;
+}
+
+.product-card__price,
+label {
+    font-weight: bold;
+}
+
+.product-card__btn-wishlist {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    border: none;
+    background-color: white;
+    padding: 12px 10px 10px;
+    box-shadow: 2px 2px 5px 0px rgba(0, 64, 128, 0.1);
+}
+
+.product-card__btn-wishlist svg {
+    fill: lightgrey;
+}
+
+/* CSS */
+
+/* CSS */
+.button-44 {
+    margin-top: 15px;
+    background: #e62143;
+    border-radius: 11px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-family: Mija, -apple-system, BlinkMacSystemFont, Roboto, "Roboto Slab", "Droid Serif", "Segoe UI", system-ui,
+        Arial, sans-serif;
+    font-size: 1.15em;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 33.4929px;
+    padding: 0.8em 1em;
+    text-align: center;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    text-shadow: rgba(0, 0, 0, 0.3) 1px 1px 1px;
+    text-underline-offset: 1px;
+    transition: all 0.2s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 60%;
+    word-break: break-word;
+    border: 0;
+}
+
+.button-44:active,
+.button-44:focus {
+    border-bottom-style: none;
+    border-color: #dadada;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 3px 3px inset;
+    outline: 0;
+}
+
+.button-44:hover {
+    border-bottom-style: none;
+    border-color: #dadada;
+}
+
+.input {
+    margin-top: 15px;
+    position: relative;
+
+    &__label {
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: calc(var(--size-bezel) * 0.75) calc(var(--size-bezel) * 0.5);
+        margin: calc(var(--size-bezel) * 0.75 + 3px) calc(var(--size-bezel) * 0.5);
+        background: pink;
+        white-space: nowrap;
+        transform: translate(0, 0);
+        transform-origin: 0 0;
+        background: var(--color-background);
+        transition: transform 120ms ease-in;
+        font-weight: bold;
+        line-height: 1.2;
+    }
+    &__field {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        border: 3px solid currentColor;
+        padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
+        color: currentColor;
+        background: transparent;
+        border-radius: var(--size-radius);
+
+        &:focus,
+        &:not(:placeholder-shown) {
+            & + .input__label {
+                transform: translate(0.25rem, -65%) scale(0.8);
+                color: var(--color-accent);
+            }
+        }
+    }
+}

@@ -9,3 +9,8 @@ export { default as CoinFactory } from "./CoinFactory";
 export { default as Notifier } from "./Decorator";
 export { default as Observer } from "./observer";
 export { default as Povedenn } from "./twopat";
+export { default as Store } from "./Store";
+export { default as Products } from "./Products";
+export { default as ProductsCreate } from "./ProductsCreate";
+
+// export { default as ProductCard } from "./ProductCard/ProductCard";

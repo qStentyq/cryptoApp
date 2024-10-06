@@ -1,4 +1,3 @@
-import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import { Layout, Typography, Space } from "antd";
 
@@ -13,8 +12,12 @@ import {
     Notifier,
     Observer,
     Povedenn,
+    Store,
+    Products,
+    ProductsCreate,
 } from "./components";
 import "./App.css";
+
 const App = () => {
     return (
         <div className='app'>
@@ -35,6 +38,9 @@ const App = () => {
                             <Route path='/decorator' element={<Notifier />} />
                             <Route path='/observer' element={<Observer />} />
                             <Route path='/povedenn' element={<Povedenn />} />
+                            <Route path='/store' element={<Store />} />
+                            <Route path='/prod' element={<Products />} />
+                            <Route path='/create' element={<ProductsCreate />} />
                         </Routes>
                     </div>
                 </Layout>
