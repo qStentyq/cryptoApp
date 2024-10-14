@@ -8,11 +8,12 @@ import requests
 
 app = FastAPI()
 
+origins = ['*']
+
 app.add_middleware(
     CORSMiddleware,
+    allow_origins = origins,
     allow_credentials = True,
-    allow_origins = ['http://localhost:5173', 'http://localhost:3000', 'http://localhost:8000',
-                     'http://localhost:8001'],
     allow_methods = ['*'],
     allow_headers = ['*']
 )
@@ -48,7 +49,7 @@ def get (pk: str):
 async def create(request: Request, background_tasks: BackgroundTasks): #id, quantity
     body = await request.json()
 
-    req = requests.get('http://localhost:8000/products/%s' % body['id'])
+    req = requests.get('http://backend-mic1:8000/products/%s' % body['id'])
     product = req.json()
     order = Order(
         product_id = body['id'],

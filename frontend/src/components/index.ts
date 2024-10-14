@@ -12,5 +12,7 @@ export { default as Povedenn } from "./twopat";
 export { default as Store } from "./Store";
 export { default as Products } from "./Products";
 export { default as ProductsCreate } from "./ProductsCreate";
+export { default as ProductDetail } from "./ProductDetailed/ProductDetailed";
+
 
 // export { default as ProductCard } from "./ProductCard/ProductCard";

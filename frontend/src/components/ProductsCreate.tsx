@@ -1,6 +1,6 @@
 import { Wrapper } from "./Wrapper";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./localbootstrap.scss";
 
 export default function ProductsCreate() {
@@ -64,8 +64,11 @@ export default function ProductsCreate() {
                         />
                         <label>Quantity</label>
                     </div>
-
-                    <button className='w-100 btn btn-lg btn-primary' type='submit'>
+                    <Link to='/prod'>
+                        {" "}
+                        <button className='w-100 btn btn-lg btn-secondary'>Cancel</button>
+                    </Link>
+                    <button className='w-100 btn btn-lg btn-primary mt-3' type='submit'>
                         Submit
                     </button>
                 </form>

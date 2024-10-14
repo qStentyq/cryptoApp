@@ -15,6 +15,7 @@ import {
     Store,
     Products,
     ProductsCreate,
+    ProductDetail,
 } from "./components";
 import "./App.css";
 
@@ -26,7 +27,7 @@ const App = () => {
             </div>
             <div className='main'>
                 <Layout>
-                    <div className='routes'>
+                    <div className='routes' style={{ minHeight: "100vh" }}>
                         <Routes>
                             <Route path='/' element={<Homepage />} />
                             <Route path='/exchanges' element={<Exchanges />} />
@@ -41,6 +42,7 @@ const App = () => {
                             <Route path='/store' element={<Store />} />
                             <Route path='/prod' element={<Products />} />
                             <Route path='/create' element={<ProductsCreate />} />
+                            <Route path='/store/:productId' element={<ProductDetail />} />
                         </Routes>
                     </div>
                 </Layout>
