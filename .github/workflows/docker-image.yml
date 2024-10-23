@@ -42,7 +42,7 @@ jobs:
       - name : Stop and remove Docker container 
         run: docker stop my-app-container && docker rm my-app-container 
   
-      - name: Tag Docker image
+      - name: Tag Docker image2
         run: docker tag inventoryMic:latest stenty/inventoryMic:latest
   
       - name: Push Docker image to DockerHub
