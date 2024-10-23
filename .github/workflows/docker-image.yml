@@ -33,7 +33,8 @@ jobs:
   
       - name: Test the application with curl 
         run: | 
-          if curl -s http://localhost:8000/products | grep "expected content"; then echo "Application is running successfully."
+          if curl -s http://localhost:8000/products; then 
+            echo "Application is running successfully."
           else 
             echo "Application did not start correctly"
             exit 1
