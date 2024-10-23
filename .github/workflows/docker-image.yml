@@ -47,7 +47,7 @@ jobs:
         run: docker tag export-app:latest stenty/inventorymic:latest
   
       - name: Push Docker image to DockerHub
-        run: docker push stenty/export-app:latest
+        run: docker push stenty/inventorymic:latest
   
   
         
