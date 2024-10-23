@@ -44,7 +44,7 @@ jobs:
         run: docker stop my-app-container && docker rm my-app-container 
   
       - name: Tag Docker image2
-        run: docker tag inventoryMic:latest stenty/inventoryMic:latest
+        run: docker tag inventorymic:latest stenty/inventorymic:latest
   
       - name: Push Docker image to DockerHub
         run: docker push stenty/my-app:latest
